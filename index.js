@@ -15,7 +15,7 @@ function addManager() {
   {
     type: "input",
     name: "name",
-    message: "Enter manager's name:",
+    message: "Enter manager's name (first and last):",
   },
   {
     type: "input",
@@ -24,7 +24,7 @@ function addManager() {
   },
   {
     type: "input",
-    name: "ID",
+    name: "id",
     message: "Enter manager's ID number:",
   },
   {
@@ -33,8 +33,10 @@ function addManager() {
     message: "Enter manager's office number:",
   }])
   .then(function(responses){
-    console.log(responses)
-
+    // console.log(responses)
+    let newManager = new Manager (responses.name, responses.id, responses.email, responses.officeNumber)
+    console.log(newManager)
+    team.push(newManager)
     addAnother()
   })
 }
@@ -44,7 +46,7 @@ function addEngineer() {
   {
     type: "input",
     name: "name",
-    message: "Enter engineer's name:",
+    message: "Enter engineer's name (first and last):",
   },
   {
     type: "input",
@@ -53,7 +55,7 @@ function addEngineer() {
   },
   {
     type: "input",
-    name: "ID",
+    name: "id",
     message: "Enter engineer's ID number:",
   },
   {
@@ -62,8 +64,10 @@ function addEngineer() {
     message: "Enter engineer's Github username:",
   }])
   .then(function(responses){
-    console.log(responses)
-
+    // console.log(responses)
+    let newEngineer = new Engineer (responses.name, responses.email, responses.id, responses.github)
+    console.log(newEngineer)
+    team.push(newEngineer)
     addAnother()
   })
 }
@@ -73,7 +77,7 @@ function addIntern() {
   {
     type: "input",
     name: "name",
-    message: "Enter intern's name:",
+    message: "Enter intern's name (first and last):",
   },
   {
     type: "input",
@@ -82,7 +86,7 @@ function addIntern() {
   },
   {
     type: "input",
-    name: "ID",
+    name: "id",
     message: "Enter intern's ID number:",
   },
   {
@@ -91,8 +95,10 @@ function addIntern() {
     message: "Enter intern's school:",
   }])
   .then(function(responses){
-    console.log(responses)
-
+    // console.log(responses)
+    let newIntern = new Intern (responses.name, responses.email, responses.id, responses.school)
+    console.log(newIntern)
+    team.push(newIntern)
     addAnother()
   })
 }
@@ -108,12 +114,12 @@ function addAnother(){
   ])
   .then(function(responses){
     console.log(responses.addMore)
-    if(responses.addMore == "Add engineer"){
+    if(responses.addMore === "Add engineer"){
       addEngineer()
-    } else if(responses.addMore == "Add intern"){
+    } else if(responses.addMore === "Add intern"){
       addIntern()
     } else {
-      generateHtml()
+      //generateHtml()
     }
   })
 }
