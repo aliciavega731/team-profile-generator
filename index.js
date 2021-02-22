@@ -65,7 +65,7 @@ function addEngineer() {
   }])
   .then(function(responses){
     // console.log(responses)
-    let newEngineer = new Engineer (responses.name, responses.email, responses.id, responses.github)
+    let newEngineer = new Engineer (responses.name, responses.id, responses.email, responses.github)
     console.log(newEngineer)
     team.push(newEngineer)
     addAnother()
@@ -96,7 +96,7 @@ function addIntern() {
   }])
   .then(function(responses){
     // console.log(responses)
-    let newIntern = new Intern (responses.name, responses.email, responses.id, responses.school)
+    let newIntern = new Intern (responses.name, responses.id, responses.email, responses.school)
     console.log(newIntern)
     team.push(newIntern)
     addAnother()
