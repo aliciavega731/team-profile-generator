@@ -29,6 +29,8 @@ The video of the runthrough is in the images folder within the src folder.
 ### Usage
 Developers must familiarize themselves with using their terminal to input information. The process is as simple as typing `node index.js` in the terminal and answer the questions following the prompts. All of the input information will get pushed out into html file.
 
+![Screenshot](./src/images/screenshot.png)
+
 ### License
 This application is licensed by ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg).
 
