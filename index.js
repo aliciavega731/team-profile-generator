@@ -5,6 +5,9 @@ const inquirer = require ('inquirer');
 const Engineer = require ('./lib/Engineer');
 const Intern = require ('./lib/Intern');
 const Manager = require ('./lib/Manager');
+const cardGenerator = require('./src/cards');
+let cards = require ('./src/cards')
+let html = require ('./src/html')
 
 // Team array will have all of the objects to then turn into a string
 const team = []; 
@@ -125,8 +128,9 @@ function addAnother(){
 }
 
 function createHtml(){
-  // console.log("Time to build the HTML")
-  let cardString = ""
+  let card = ""
+  team.forEach(employee => card += cards(employee))
+  let cardString = html(card)
   fs.writeFile("./output/createHtml.html", cardString, function(e){console.error(e)})
 }
 
