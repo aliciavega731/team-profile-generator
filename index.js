@@ -179,7 +179,7 @@ function createHtml(){
 
 </html>
   `
-  fs.writeFile("./dist/createHtml.html", myString, function(e){console.error(e)})
+  fs.writeFile("./output/createHtml.html", myString, function(e){console.error(e)})
 }
 
 addManager()
