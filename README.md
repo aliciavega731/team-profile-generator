@@ -23,7 +23,7 @@ This week's challenge had us build a Node.js command-line application that takes
 * THEN I exit the application, and the HTML is generated
 
 ### Screenshot of application
-![Runthrough](./src/images/vega-runthrough.gif)
+![Runthrough](./src/images/vega-runthrough.gif) </br>
 The video of the runthrough is in the images folder within the src folder.
 
 ### Usage
